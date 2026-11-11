@@ -11,8 +11,7 @@ const processInput = (value: string | number | boolean): string | number => {
     return value.trim().toLowerCase();
   } else if (typeof value === "number") {
     return value * 10;
-  } else (typeof value === "boolean"){
-    return value? "Active" : "Inactive"
-
+  } else {
+    return value ? "Active" : "Inactive";
   }
 };

@@ -29,3 +29,18 @@ let formatCoordinate = (
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
+
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
+
+const getPopularCourses = (
+  courses: Course[],
+  minStudents: number,
+): Course[] => {
+  return courses.filter((courses) => {
+    return courses.isPublished === true && courses.students >= minStudents;
+  });
+};
